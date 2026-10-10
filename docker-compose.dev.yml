@@ -1,0 +1,13 @@
+services:
+  go:
+    ports:
+      - "8082:8080"
+      # for dlv debugger
+      - "2345:2345"
+    init: true
+    volumes:
+      - ${APP_PATH}/:/usr/src/app
+      - go-mod-cache:/go/pkg/mod
+
+volumes:
+  go-mod-cache:

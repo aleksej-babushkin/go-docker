@@ -1,0 +1,11 @@
+services:
+  go:
+    ports:
+      - "8083:8080"
+    init: true
+    volumes:
+      - ./app:/usr/src/app
+      - go-mod-cache:/go/pkg/mod
+
+volumes:
+  go-mod-cache:

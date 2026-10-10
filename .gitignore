@@ -1,0 +1,15 @@
+**/.env
+
+# exclude Windows file's system files 
+**/.thumbnails
+**/Thumbs.db
+
+# exclude Mac OS file's system files
+**/.DS_Store
+**/__MACOSX/
+
+# exclude VS Code IDE files
+**/.vscode
+**/*.workspace
+**/launch.json
+**/restore-terminals.json
