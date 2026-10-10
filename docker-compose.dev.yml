@@ -5,9 +5,17 @@ services:
       # for dlv debugger
       - "2345:2345"
     init: true
+    user: "${UID}:${GID}"
+    environment:
+      GOCACHE: /tmp/go-build
+      DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?sslmode=disable
     volumes:
       - ${APP_PATH}/:/usr/src/app
       - go-mod-cache:/go/pkg/mod
+
+  postgres:
+    ports:
+      - "5437:5432"
 
 volumes:
   go-mod-cache:

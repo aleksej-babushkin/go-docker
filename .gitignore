@@ -3,6 +3,7 @@
 # exclude Windows file's system files 
 **/.thumbnails
 **/Thumbs.db
+**/*Zone.Identifier
 
 # exclude Mac OS file's system files
 **/.DS_Store
